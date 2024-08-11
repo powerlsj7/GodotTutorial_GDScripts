@@ -10,7 +10,8 @@
   </style>
   <link rel="stylesheet" href="styles.css"> <!-- CSS 파일 불러오기 -->
 <script src="utils.js"></script> <!-- JavaScript 파일 불러오기 -->
-
+<audio src="button.mp3" id="buttonAudio" volume ></audio>
+<input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5">
   <title>고도 튜토리얼</title>
   <h1>고도 GDScripts 튜토리얼 </h1>
 </head>
@@ -25,11 +26,12 @@
       <legend>목표</legend>
       <h>고도엔진 초심자나 파이썬이 처음인 사람들이</h><br><h> GDScripts와 엔진에디터에서 어떻게 쓰이는지 알아보기!</h>
       <br><h>나는 html도 공부할겸 초보자들이 이 영상을 나처럼 길게 안보길 바라면서 바친다!</h>
+      <h>영상에 나온 순서대로 요약해서 쭉 진행한다.</h>
     </fieldset>
     <fieldset>
       <legend>버튼을 누르면 다음으로 진행</legend>
       <!-- <a href="page1.html" class="button">다음</a> -->
-      <input id="button" value="다음">
+      <input class="button" type="button" value="다음" id="button">
        <script>NextPage("1.html","button")</script>
     </fieldset>
 </body>

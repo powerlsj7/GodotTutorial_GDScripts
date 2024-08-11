@@ -9,28 +9,28 @@
     }
   </style>
   <link rel="stylesheet" href="styles.css"> <!-- CSS 파일 불러오기 -->
-<script src="utils.js"></script> <!-- JavaScript 파일 불러오기 -->
-
+  <script src="utils.js"></script> <!-- JavaScript 파일 불러오기 -->
+  <audio src="button.mp3" id="buttonAudio" ></audio>
   <title>고도 튜토리얼</title>
-  <h1>고도 GDScripts 튜토리얼 </h1>
+  <h1>고도 GDScripts 튜토리얼1 </h1>
 </head>
 
 <body>
   <form action="register.php">
     <fieldset>
-      <legend>GDScripts를 시작해보자!</legend>
-      <p><a href="https://youtu.be/e1zJS31tr88" target="_blank">원본영상링크[Brakey]</a></p>
+ <img src="image/0.png"><br>
+ 
+ <h>+버튼을 눌러서 노드라는 놈을 만들어봅시다!</h><br>
     </fieldset>
     <fieldset>
-      <legend>목표</legend>
-      <h>고도엔진 초심자나 파이썬이 처음인 사람들이</h><br><h> GDScripts와 엔진에디터에서 어떻게 쓰이는지 알아보기!</h>
-      <br><h>나는 html도 공부할겸 초보자들이 이 영상을 나처럼 길게 안보길 바라면서 바친다!</h>
+  
     </fieldset>
     <fieldset>
-      <legend>버튼을 누르면 다음으로 진행</legend>
-      <!-- <a href="page1.html" class="button">다음</a> -->
-      <input id="button" value="다음">
-       <script>NextPage("page1.html","button")</script>
+      <legend>버튼을 누르세요!</legend>
+      <input class="button" type="button" value="뒤로" id="button">
+      <script>NextPage("index.html", "button")</script>
+      <input class="button" type="button" value="다음" id="button1">
+      <script>NextPage("2.html", "button1")</script>
     </fieldset>
 </body>
 

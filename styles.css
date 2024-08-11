@@ -1,5 +1,5 @@
 /* styles.css */
-#button {
+.button {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
@@ -8,21 +8,21 @@
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
-    border: none; /* ±âº» ¹öÆ° ½ºÅ¸ÀÏÀ» ¾ø¾Ö±â À§ÇØ */
-    cursor: pointer; /* ¸¶¿ì½º¸¦ ¿Ã·ÈÀ» ¶§ Æ÷ÀÎÅÍ Ä¿¼­·Î º¯°æ */
-    transition: background-color 0.3s ease; /* ¹è°æ»öÀÌ ºÎµå·´°Ô º¯°æµÇµµ·Ï Æ®·£Áö¼Ç Ãß°¡ */
+    border: none; /* ï¿½âº» ï¿½ï¿½Æ° ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ö±ï¿½ ï¿½ï¿½ï¿½ï¿½ */
+    cursor: pointer; /* ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
+    transition: background-color 0.3s ease; /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµå·´ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ */
 }
 
-    #button:hover {
-        background-color: gray; /* ¸¶¿ì½º¸¦ ¿Ã·ÈÀ» ¶§ ¹è°æ»ö º¯°æ */
+    .button:hover {
+        background-color: gray; /* ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
     }
 
-    #button:active {
-        background-color: navy; /* ¹öÆ°À» Å¬¸¯ÇßÀ» ¶§ ¹è°æ»ö º¯°æ */
-        transform: scale(0.98); /* Å¬¸¯ÇßÀ» ¶§ ¹öÆ°ÀÌ »ìÂ¦ ÀÛ¾ÆÁö´Â È¿°ú */
+    .button:active {
+        background-color: navy; /* ï¿½ï¿½Æ°ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
+        transform: scale(0.98); /* Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½Â¦ ï¿½Û¾ï¿½ï¿½ï¿½ï¿½ï¿½ È¿ï¿½ï¿½ */
     }
 
-#nodeButton {
+.nodeButton {
     display: inline-block;
     padding: 10px 20px;
     font-size: 15px;
@@ -31,18 +31,18 @@
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
-    border: none; /* ±âº» ¹öÆ° ½ºÅ¸ÀÏÀ» ¾ø¾Ö±â À§ÇØ */
-    cursor: pointer; /* ¸¶¿ì½º¸¦ ¿Ã·ÈÀ» ¶§ Æ÷ÀÎÅÍ Ä¿¼­·Î º¯°æ */
-    transition: background-color 0.3s ease; /* ¹è°æ»öÀÌ ºÎµå·´°Ô º¯°æµÇµµ·Ï Æ®·£Áö¼Ç Ãß°¡ */
+    border: none; /* ï¿½âº» ï¿½ï¿½Æ° ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ö±ï¿½ ï¿½ï¿½ï¿½ï¿½ */
+    cursor: pointer; /* ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
+    transition: background-color 0.3s ease; /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµå·´ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ */
     margin: 10px 0;
 }
-#nodeButton:hover {
-    background-color: gray; /* ¸¶¿ì½º¸¦ ¿Ã·ÈÀ» ¶§ ¹è°æ»ö º¯°æ */
+.nodeButton:hover {
+    background-color: gray; /* ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 }
 
-#nodeButton:active {
-    background-color: navy; /* ¹öÆ°À» Å¬¸¯ÇßÀ» ¶§ ¹è°æ»ö º¯°æ */
-    transform: scale(0.98); /* Å¬¸¯ÇßÀ» ¶§ ¹öÆ°ÀÌ »ìÂ¦ ÀÛ¾ÆÁö´Â È¿°ú */
+.nodeButton:active {
+    background-color: navy; /* ï¿½ï¿½Æ°ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
+    transform: scale(0.98); /* Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½Â¦ ï¿½Û¾ï¿½ï¿½ï¿½ï¿½ï¿½ È¿ï¿½ï¿½ */
 }
 .container {
     display: flex;
