@@ -1,0 +1,53 @@
+/* styles.css */
+#button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: darkblue;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none; /* 기본 버튼 스타일을 없애기 위해 */
+    cursor: pointer; /* 마우스를 올렸을 때 포인터 커서로 변경 */
+    transition: background-color 0.3s ease; /* 배경색이 부드럽게 변경되도록 트랜지션 추가 */
+}
+
+    #button:hover {
+        background-color: gray; /* 마우스를 올렸을 때 배경색 변경 */
+    }
+
+    #button:active {
+        background-color: navy; /* 버튼을 클릭했을 때 배경색 변경 */
+        transform: scale(0.98); /* 클릭했을 때 버튼이 살짝 작아지는 효과 */
+    }
+
+#nodeButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: white;
+    background-color: darkgreen;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none; /* 기본 버튼 스타일을 없애기 위해 */
+    cursor: pointer; /* 마우스를 올렸을 때 포인터 커서로 변경 */
+    transition: background-color 0.3s ease; /* 배경색이 부드럽게 변경되도록 트랜지션 추가 */
+    margin: 10px 0;
+}
+#nodeButton:hover {
+    background-color: gray; /* 마우스를 올렸을 때 배경색 변경 */
+}
+
+#nodeButton:active {
+    background-color: navy; /* 버튼을 클릭했을 때 배경색 변경 */
+    transform: scale(0.98); /* 클릭했을 때 버튼이 살짝 작아지는 효과 */
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+.text {
+    flex: 1;
+}
