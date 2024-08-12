@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: D2Coding;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css"> <!-- CSS 파일 불러오기 -->
+  <script src="utils.js"></script> <!-- JavaScript 파일 불러오기 -->
+  <audio src="button.mp3" id="buttonAudio" ></audio>
+  <title>고도 튜토리얼</title>
+  <h1>고도 GDScripts 튜토리얼15</h1>
+</head>
+
+<body>
+  <form action="register.php">
+    <fieldset>
+ <img src="image/22.png"><br>
+ <h4>뭘할거냐면 입력 버튼을 눌렀을 때와 누르고 땠을 때의 처리를 해볼거임!</h4><br>
+ <h4>저렇게 코드를 작성해줘!</h4>
+ <h4>func _input(event):</h4><h4>
+	  if event.is_action_pressed("my_action"):</h4>
+<h4>		  $Label.modulate=Color.RED</h4>
+	<h4>if event.is_action_released("my_action"):</h4>
+  <h4>$Label.modulate=Color.GREEN</h4>	
+  <h4>주의! 들여쓰기 지켜야함!모르겠으면 밑에 가서 공부하고와! </h4>
+  <p><a href="https://dojang.io/mod/page/view.php?id=2166" target="_blank">코드도장_들여쓰기</a></p>
+    </fieldset>
+    <fieldset>
+      <img src="image/gif.gif"><br>
+      <h4>그럼 버튼 누를 때와 버튼누른상태에서 땔 때 초기화된 색깔로 바뀜 </h4><br>
+         </fieldset>
+         <fieldset>
+      <legend>버튼을 누르세요!</legend>
+      <input class="button" type="button" value="뒤로" id="button">
+      <script>NextPage("14.html", "button")</script>
+      <input class="button" type="button" value="다음" id="button1">
+      <script>NextPage("16.html", "button1")</script>
+    </fieldset>
+</body>
+
+</html>

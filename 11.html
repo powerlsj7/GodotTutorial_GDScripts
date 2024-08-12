@@ -12,23 +12,28 @@
   <script src="utils.js"></script> <!-- JavaScript 파일 불러오기 -->
   <audio src="button.mp3" id="buttonAudio" ></audio>
   <title>고도 튜토리얼</title>
-  <h1>고도 GDScripts 튜토리얼2 </h1>
+  <h1>고도 GDScripts 튜토리얼11 </h1>
 </head>
 
 <body>
   <form action="register.php">
     <fieldset>
- <img src="image/a2.png"><br>
- 
- <h4>Node를 더블클릭이나 F2를 클릭하여 "Main"으로 바꿔줍니다. </h4><br>
- <h4>그 후 Ctrl+S 키를 눌러서 저장하면 main.tscn이란 씬이 저장</h4>
+ <img src="image/14.png"><br>
+ <h4>이번에는 텍스트의 색깔에도 접근해볼거임! </h4><br>
+ <h4>Label을 클릭 후 아까 Font Sizes의 바로 밑이야! </h4><br>
+ <h4>오른쪽 하단의 CanvasItem에서 Modulate에 다른 색으로 초기화 해볼거임!</h4>
     </fieldset>
     <fieldset>
+      <img src="image/15.png"><br>
+      <h4>main.gd에서 $Label.modulate=Color.GREEN 을 작성하고 실행시켜봐!</h4><br>
+      <h4> 텍스트의 색상이 바뀐 것을 알 수 있어!</h4>
+         </fieldset>
+         <fieldset>
       <legend>버튼을 누르세요!</legend>
       <input class="button" type="button" value="뒤로" id="button">
-      <script>NextPage("1.html", "button")</script>
+      <script>NextPage("10.html", "button")</script>
       <input class="button" type="button" value="다음" id="button1">
-      <script>NextPage("3.html", "button1")</script>
+      <script>NextPage("12.html", "button1")</script>
     </fieldset>
 </body>
 
