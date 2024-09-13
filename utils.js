@@ -38,3 +38,13 @@ document.addEventListener("DOMContentLoaded", function() {
     container.appendChild(imgElement);
 });
 }
+function copyCode() {
+    // 코드 블록의 텍스트를 가져옵니다.
+    const codeBlock = document.getElementById('code-block');
+    const codeText = codeBlock.textContent || codeBlock.innerText;
+
+    // 임시 textarea를 생성하여 클립보드에 복사합니다.
+    const textarea = document.createElement('textarea');
+    textarea.value = codeText;
+  
+  }

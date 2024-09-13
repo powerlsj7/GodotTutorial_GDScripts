@@ -12,25 +12,42 @@
   <script src="utils.js"></script> <!-- JavaScript 파일 불러오기 -->
   <audio src="button.mp3" id="buttonAudio" ></audio>
   <title>고도 튜토리얼</title>
-  <h1>고도 GDScripts 튜토리얼13 </h1>
+  <h1>고도 GDScripts 튜토리얼17 </h1>
 </head>
 
 <body>
   <form action="register.php">
     <fieldset>
- <img src="image/18.png"><br>
- <h4>새로운 액션 추가 탭에 my_action을 입력하고 Enter 키나 추가버튼 클릭!</h4><br>
+ <img src="image/25.png"><br>
+ <h4>그림처럼 코드를 작성후에 스페이스바를 5번 누르면 저런 메시지가 뜸. 체력이 0이되면 죽음.</h4><br>
     </fieldset>
     <fieldset>
-      <img src="image/19.png"><br>
-      <h4>my_action 우측에 보이는 +버튼을 클릭! </h4><br>
+      <img src="image/26.png"><br>
+      <h4>코드를 좀더 수정해서 elif와 else 로 분기를 나눠서 작성하면 그림처럼 50이하일 땐 부상이고 0이면 죽게됨. </h4>
+      <pre id="code-block"><code>extends Node
+
+var health =100
+# Called when the node enters the scene tree for the first time.
+func _input(event):
+	if event.is_action_pressed("my_action"):
+		health-=20
+		print(health)
+		if(health)<=0:
+			health=0
+			print("YOU DIED!")
+		elif health<50:
+			print("YOU ARE INJURED!")
+		else:
+			print("YOU ARE HEALTHY")
+      </pre></code>
+      <button onclick="copyCode()">코드 복사</button>
          </fieldset>
          <fieldset>
       <legend>버튼을 누르세요!</legend>
       <input class="button" type="button" value="뒤로" id="button">
-      <script>NextPage("12.html", "button")</script>
+      <script>NextPage("16.html", "button")</script>
       <input class="button" type="button" value="다음" id="button1">
-      <script>NextPage("14.html", "button1")</script>
+      <script>NextPage("18.html", "button1")</script>
     </fieldset>
 </body>
 

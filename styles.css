@@ -8,19 +8,25 @@
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
-    border: none; /* �⺻ ��ư ��Ÿ���� ���ֱ� ���� */
-    cursor: pointer; /* ���콺�� �÷��� �� ������ Ŀ���� ���� */
-    transition: background-color 0.3s ease; /* ������ �ε巴�� ����ǵ��� Ʈ������ �߰� */
+    border: none;
+    /* �⺻ ��ư ��Ÿ���� ���ֱ� ���� */
+    cursor: pointer;
+    /* ���콺�� �÷��� �� ������ Ŀ���� ���� */
+    transition: background-color 0.3s ease;
+    /* ������ �ε巴�� ����ǵ��� Ʈ������ �߰� */
 }
 
-    .button:hover {
-        background-color: gray; /* ���콺�� �÷��� �� ���� ���� */
-    }
+.button:hover {
+    background-color: gray;
+    /* ���콺�� �÷��� �� ���� ���� */
+}
 
-    .button:active {
-        background-color: navy; /* ��ư�� Ŭ������ �� ���� ���� */
-        transform: scale(0.98); /* Ŭ������ �� ��ư�� ��¦ �۾����� ȿ�� */
-    }
+.button:active {
+    background-color: navy;
+    /* ��ư�� Ŭ������ �� ���� ���� */
+    transform: scale(0.98);
+    /* Ŭ������ �� ��ư�� ��¦ �۾����� ȿ�� */
+}
 
 .nodeButton {
     display: inline-block;
@@ -31,23 +37,58 @@
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
-    border: none; /* �⺻ ��ư ��Ÿ���� ���ֱ� ���� */
-    cursor: pointer; /* ���콺�� �÷��� �� ������ Ŀ���� ���� */
-    transition: background-color 0.3s ease; /* ������ �ε巴�� ����ǵ��� Ʈ������ �߰� */
+    border: none;
+    /* �⺻ ��ư ��Ÿ���� ���ֱ� ���� */
+    cursor: pointer;
+    /* ���콺�� �÷��� �� ������ Ŀ���� ���� */
+    transition: background-color 0.3s ease;
+    /* ������ �ε巴�� ����ǵ��� Ʈ������ �߰� */
     margin: 10px 0;
 }
+
 .nodeButton:hover {
-    background-color: gray; /* ���콺�� �÷��� �� ���� ���� */
+    background-color: gray;
+    /* ���콺�� �÷��� �� ���� ���� */
 }
 
 .nodeButton:active {
-    background-color: navy; /* ��ư�� Ŭ������ �� ���� ���� */
-    transform: scale(0.98); /* Ŭ������ �� ��ư�� ��¦ �۾����� ȿ�� */
+    background-color: navy;
+    /* ��ư�� Ŭ������ �� ���� ���� */
+    transform: scale(0.98);
+    /* Ŭ������ �� ��ư�� ��¦ �۾����� ȿ�� */
 }
+
 .container {
     display: flex;
     align-items: center;
 }
+
 .text {
     flex: 1;
 }
+
+pre {
+    margin: 0; /* 코드 블록 주변의 기본 여백 제거 */
+    padding: 10px; /* 내부 여백 설정 */
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: monospace; /* 모노스페이스 폰트 사용 */
+  }
+  function copyCode() {
+    // 코드 블록의 텍스트를 가져옵니다.
+    const codeBlock = document.getElementById('code-block');
+    const codeText = codeBlock.textContent || codeBlock.innerText;
+
+    // 임시 textarea를 생성하여 클립보드에 복사합니다.
+    const textarea = document.createElement('textarea');
+    textarea.value = codeText;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+
+    // 복사 완료 메시지 표시
+    alert('코드가 클립보드에 복사되었습니다!');
+  }
