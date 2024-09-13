@@ -8,6 +8,7 @@ function NextPage(pageName,id) {
 
     // Ŭ�� �̺�Ʈ �����ʸ� �߰��մϴ�.
     button.addEventListener('click', function () {
+        button.disabled = true;
         audio.play();
         audio.onended = function() {
             window.location.href = pageName; // 페이지 전환
@@ -38,13 +39,17 @@ document.addEventListener("DOMContentLoaded", function() {
     container.appendChild(imgElement);
 });
 }
-function copyCode() {
+function CopyCode() {
     // 코드 블록의 텍스트를 가져옵니다.
     const codeBlock = document.getElementById('code-block');
     const codeText = codeBlock.textContent || codeBlock.innerText;
 
-    // 임시 textarea를 생성하여 클립보드에 복사합니다.
-    const textarea = document.createElement('textarea');
-    textarea.value = codeText;
-  
-  }
+    // Clipboard API를 사용하여 클립보드에 복사합니다.
+    navigator.clipboard.writeText(codeText).then(function() {
+        // 복사 성공 시 알림을 표시합니다.
+        alert('코드가 클립보드에 복사되었습니다!');
+    }).catch(function(error) {
+        // 복사 실패 시 오류를 콘솔에 기록합니다.
+        console.error('복사 실패:', error);
+    });
+}

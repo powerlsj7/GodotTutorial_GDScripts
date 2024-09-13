@@ -76,19 +76,3 @@ pre {
     overflow-x: auto;
     font-family: monospace; /* 모노스페이스 폰트 사용 */
   }
-  function copyCode() {
-    // 코드 블록의 텍스트를 가져옵니다.
-    const codeBlock = document.getElementById('code-block');
-    const codeText = codeBlock.textContent || codeBlock.innerText;
-
-    // 임시 textarea를 생성하여 클립보드에 복사합니다.
-    const textarea = document.createElement('textarea');
-    textarea.value = codeText;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-
-    // 복사 완료 메시지 표시
-    alert('코드가 클립보드에 복사되었습니다!');
-  }
