@@ -10,28 +10,41 @@
   </style>
   <link rel="stylesheet" href="styles.css"> <!-- CSS 파일 불러오기 -->
   <script src="utils.js"></script> <!-- JavaScript 파일 불러오기 -->
-  <audio src="button.mp3" id="buttonAudio" ></audio>
+  <audio src="button.mp3" id="buttonAudio"></audio>
   <title>고도 튜토리얼</title>
-  <h1>고도 GDScripts 튜토리얼18 </h1>
+  <h1>고도 GDScripts 튜토리얼21 </h1>
 </head>
 
 <body>
   <form action="register.php">
     <fieldset>
- <img src="image/27.png"><br>
- <h4>이제 주석으로 메시지를 입력하거나 코드를 일시적으로 먹통되게 만드는 방법 등을 배울거임</h4>
- <h4>간단함 #을 입력하면됨 </h4>
+      <img src="image/31.png"><br>
+      <h4>자료형을 다른 자료형으로 바꾸는 것을 캐스팅이라고함.</h4>
+      <h4>숫자를 문자열로 바꿀 수 있게 하는 str함수를 사용하여 int형 변수를 string변수로 캐스팅해봄. </h4>
+      <h4>하단에 42가 문자열로 바뀌면서 출력이 되는것을 확인</h4>
+    <fieldset>
+      <pre id="code-block"><code>extends Node
+
+func _ready():
+	#변수를 초기화하는게 아니라 
+	#다른 자료형으로 변환하는 캐스팅을 해볼거임.
+	var number=42
+	var text="Meaning of life: "+str(number)
+	print(text)
+</pre></code>
+      <button type="button" onclick="CopyCode()">코드 복사</button>
     </fieldset>
     <fieldset>
-      <img src="image/28.png"><br>
-      <h4>단축키는 ctrl+k 고 텍스트를 마우스로 범위잡고 우클릭해서 하는 방법도 있음 주석토글! </h4><br>
-         </fieldset>
-         <fieldset>
+      <img src="image/32.png"><br>
+      <h4>캐스팅안하고 +number하고 실행하면 invalid operands 'string and 'int' in operator+이러면서 잘못된 연산하고 있다고 오류뜸</h4>
+    </fieldset>
+
+    <fieldset>
       <legend>버튼을 누르세요!</legend>
       <input class="button" type="button" value="뒤로" id="button">
-      <script>NextPage("17.html", "button")</script>
+      <script>NextPage("20.html", "button")</script>
       <input class="button" type="button" value="다음" id="button1">
-      <script>NextPage("19.html", "button1")</script>
+      <script>NextPage("22.html", "button1")</script>
     </fieldset>
 </body>
 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: D2Coding;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css"> <!-- CSS 파일 불러오기 -->
+  <script src="utils.js"></script> <!-- JavaScript 파일 불러오기 -->
+  <audio src="button.mp3" id="buttonAudio"></audio>
+  <title>고도 튜토리얼</title>
+  <h1>고도 GDScripts 튜토리얼23 </h1>
+</head>
+
+<body>
+  <form action="register.php">
+    <fieldset>
+      <img src="image/34.png"><br>
+      <h4>고도에서는 Vector2와 Vector3자료형이 있는데 Vector2는 (x,y),Vector3는 (x,y,z) 부동소수점 float자료형임</h4>
+    </fieldset>
+    <fieldset>
+      <pre id="code-block"><code>extends Node
+
+func _ready():
+	#변수를 초기화하는게 아니라 
+	#다른 자료형으로 변환하는 캐스팅을 해볼거임.
+	var position =Vector2(0.0,0.0)
+	print(position)
+	position=Vector3(0.0,0.0,0.0)
+	print(position)
+</pre></code>
+      <button type="button" onclick="CopyCode()">코드 복사</button>
+      <fieldset>
+        <img src="image/35.png"><br>
+        <h4>Vector3값을 초기화해주고 x값에 +=연산으로 2를 더해주고 값 확인.</h4>
+      </fieldset>
+      <fieldset>
+        <pre id="code-block"><code>extends Node
+
+func _ready():
+	#변수를 초기화하는게 아니라 
+	#다른 자료형으로 변환하는 캐스팅을 해볼거임.
+	var position =Vector2(0.0,0.0)
+	print(position)
+	position=Vector3(3,-10,5)
+	print(position)
+	position.x+=2
+	print(position)
+  </pre></code>
+        <button type="button" onclick="CopyCode()">코드 복사</button>
+        <fieldset>
+    </fieldset>
+    <fieldset>
+      <legend>버튼을 누르세요!</legend>
+      <input class="button" type="button" value="뒤로" id="button">
+      <script>NextPage("22.html", "button")</script>
+      <input class="button" type="button" value="다음" id="button1">
+      <script>NextPage("24.html", "button1")</script>
+    </fieldset>
+</body>
+
+</html>

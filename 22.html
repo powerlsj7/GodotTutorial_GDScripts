@@ -12,40 +12,33 @@
   <script src="utils.js"></script> <!-- JavaScript 파일 불러오기 -->
   <audio src="button.mp3" id="buttonAudio"></audio>
   <title>고도 튜토리얼</title>
-  <h1>고도 GDScripts 튜토리얼20 </h1>
+  <h1>고도 GDScripts 튜토리얼22 </h1>
 </head>
 
 <body>
   <form action="register.php">
     <fieldset>
-      <img src="image/30.png"><br>
-      <h4>이번에는 자료형 var를 여러가지 값으로 초기화 해봄.</h4>
-      <h4>var에 다양한 자료형 변수값으로 초기화 가능함. 하단에 print함수로 출력확인 됨.</h4>
-    </fieldset>
+      <img src="image/33.png"><br>
+      <h4>이번에는 float 값을 int자료형으로 캐스팅해봄. </h4>
+      <h4> 캐스팅은 int(변수)로됨.  print로 3.14와 3.14에서 int자료형으로 바뀐값을 확인할 수 있음. </h4>
     <fieldset>
       <pre id="code-block"><code>extends Node
 
 func _ready():
-	var godot_is_cool=true
-	var coolness=9001
-	print(coolness)
-	#var형태는 여러가지 자료형 변수로 초기화되는데
-	coolness=true
-	print(coolness)
-	#이렇게 var변수를 true,false의 bool값으로 초기화됨
-	coolness=0.01
-	print(coolness)
-	coolness="문자열도 들어감?"
-	print(coolness)
+	#변수를 초기화하는게 아니라 
+	#다른 자료형으로 변환하는 캐스팅을 해볼거임.
+	var pi=3.14
+	print(pi)
+	print(int(pi))
 </pre></code>
       <button type="button" onclick="CopyCode()">코드 복사</button>
     </fieldset>
     <fieldset>
       <legend>버튼을 누르세요!</legend>
       <input class="button" type="button" value="뒤로" id="button">
-      <script>NextPage("19.html", "button")</script>
+      <script>NextPage("21.html", "button")</script>
       <input class="button" type="button" value="다음" id="button1">
-      <script>NextPage("21.html", "button1")</script>
+      <script>NextPage("23.html", "button1")</script>
     </fieldset>
 </body>
 
