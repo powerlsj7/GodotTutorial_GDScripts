@@ -19,39 +19,41 @@
   <form action="register.php">
     <fieldset>
       <img src="image/36.png"><br>
-      <h4>고도에서는 Vector2와 Vector3자료형이 있는데 Vector2는 (x,y),Vector3는 (x,y,z) 부동소수점 float자료형임</h4>
+      <h4>이번에는 변수를 특정 자료형으로 지정하는 문법을 배움!</h4>
+      <h4>:자료형=값 이렇게 하면됨</h4>
     </fieldset>
     <fieldset>
       <pre id="code-block"><code>extends Node
 
 func _ready():
-	#변수를 초기화하는게 아니라 
-	#다른 자료형으로 변환하는 캐스팅을 해볼거임.
-	var position =Vector2(0.0,0.0)
-	print(position)
-	position=Vector3(0.0,0.0,0.0)
-	print(position)
+	#이번에는 변수의 자료형을 처음 선언할 때 지정해볼거임.
+	var damage: int=15
+	print(damage)
 </pre></code>
       <button type="button" onclick="CopyCode()">코드 복사</button>
       <fieldset>
-        <img src="image/36.png"><br>
-        <h4>Vector3값을 초기화해주고 x값에 +=연산으로 2를 더해주고 값 확인.</h4>
+        <img src="image/37.png"><br>
+        <h4>각각 변수에 자료형을 지정해줌. 그리고 자료형이 다른 값도 초기화해봄.</h4>
       </fieldset>
       <fieldset>
         <pre id="code-block"><code>extends Node
 
 func _ready():
-	#변수를 초기화하는게 아니라 
-	#다른 자료형으로 변환하는 캐스팅을 해볼거임.
-	var position =Vector2(0.0,0.0)
-	print(position)
-	position=Vector3(3,-10,5)
-	print(position)
-	position.x+=2
-	print(position)
+	#이번에는 변수의 자료형을 처음 선언할 때 지정해볼거임.
+	var damage:=15
+	var tank:="탱크"
+	var floatValue:=10.2
+	print(damage)
+	print(tank)
+	print(floatValue)
+	floatValue="이건 안넣어짐?"
   </pre></code>
         <button type="button" onclick="CopyCode()">코드 복사</button>
         <fieldset>
+    </fieldset>
+    <fieldset>
+      <img src="image/37.png"><br>
+      <h4>지정된 자료형과 다른 변수값으로 초기화하려면 오류가 발생함.</h4>
     </fieldset>
     <fieldset>
       <legend>버튼을 누르세요!</legend>
