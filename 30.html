@@ -12,13 +12,13 @@
   <script src="utils.js"></script> <!-- JavaScript 파일 불러오기 -->
   <audio src="button.mp3" id="buttonAudio"></audio>
   <title>고도 튜토리얼</title>
-  <h1>고도 GDScripts 튜토리얼29</h1>
+  <h1>고도 GDScripts 튜토리얼30</h1>
 </head>
 
 <body>
   <form action="register.php">
     <fieldset>
-      <img src="image/47.png"><br>
+      <img src="image/50.png"><br>
       <h4>이제 난수를 배워볼거임.</h4>
       <h4>randf함수는 0~1의 부동소수점 값을 반환함. 0.8일때와 아닐 때 출력을 나눠서 확인해봄.</h4>
     </fieldset>
@@ -37,31 +37,14 @@ func _ready():
           <button type="button" onclick="CopyCode()">코드 복사</button>
       </fieldset>
 
-  <img src="image/48.png"><br>
+  <img src="image/51.png"><br>
   <h4>randi_range함수는 매개변수 from,to까지 정수형값을 반환함.</h4>
-  <fieldset>
-    <pre id="code-block"><code>extends Node
-
-func _ready():
-	#0~1의 값을 반환하는함수 randf
-	for i in 10:
-		var character_height=randi_range(140,210)
-		print("(int)Your character is "+str(character_height)+"cm tall.")
-</pre></code>
-      <button type="button" onclick="CopyCode()">코드 복사</button>
-  </fieldset>
-  <fieldset>
-    <img src="image/49.png"><br>
-    <h4>함수에 Ctrl키를 누르고 왼쪽클릭하면 함수 설명문서를 고도엔진 내에서 확인할 수 있음.</h4>
-    <h4>한글 번역은 없지만 드래그로 복사가 가능함.</h4>
-  </fieldset>
-
     <fieldset>
       <legend>버튼을 누르세요!</legend>
       <input class="button" type="button" value="뒤로" id="button">
-      <script>NextPage("28.html", "button")</script>
+      <script>NextPage("29.html", "button")</script>
       <input class="button" type="button" value="다음" id="button1">
-      <script>NextPage("30.html", "button1")</script>
+      <script>NextPage("31.html", "button1")</script>
     </fieldset>
 </body>
 
