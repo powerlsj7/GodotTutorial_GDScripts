@@ -39,15 +39,15 @@ document.addEventListener("DOMContentLoaded", function() {
     container.appendChild(imgElement);
 });
 }
-function CopyCode() {
+function CopyCode(code='code-block') {
     // 코드 블록의 텍스트를 가져옵니다.
-    const codeBlock = document.getElementById('code-block');
+    const codeBlock = document.getElementById(code);
     const codeText = codeBlock.textContent || codeBlock.innerText;
 
     // Clipboard API를 사용하여 클립보드에 복사합니다.
     navigator.clipboard.writeText(codeText).then(function() {
         // 복사 성공 시 알림을 표시합니다.
-        alert('코드가 클립보드에 복사되었습니다!');
+       // alert('코드가 클립보드에 복사되었습니다!');
     }).catch(function(error) {
         // 복사 실패 시 오류를 콘솔에 기록합니다.
         console.error('복사 실패:', error);

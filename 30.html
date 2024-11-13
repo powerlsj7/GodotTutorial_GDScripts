@@ -19,26 +19,53 @@
   <form action="register.php">
     <fieldset>
       <img src="image/50.png"><br>
-      <h4>이제 난수를 배워볼거임.</h4>
-      <h4>randf함수는 0~1의 부동소수점 값을 반환함. 0.8일때와 아닐 때 출력을 나눠서 확인해봄.</h4>
+      <h4>배열을 다뤄봄.</h4>
+      <h4>다음과 같은 문법으로 배열 선언이 가능하고 특정 자료형 배열로도 선언가능함. </h4>
+      <h4>사진 item2에서는 String자료형인데 정수형 값이 요소로 들어가서 오류가 발생한 것을 확인할 수 있음.</h4>
     </fieldset>
       <fieldset>
         <pre id="code-block"><code>extends Node
 
 func _ready():
-	#0~1의 값을 반환하는함수 randf
-	for i in 10:
-		var roll=randf()
-		if roll <=0.8:
-			print("You found a COMMON item.")
-		else:
-			print("You found a Rare item!")
+	#대괄호안에 요소를 넣을 수 있음.
+	#요소는 자료형이 달라도 가능함
+	var items =["Potion",3,6.1]
+	#만약 요소를 특정 자료형으로 하고 싶다면
+	var item2:Array[String]=["하하","1"]
     </pre></code>
-          <button type="button" onclick="CopyCode()">코드 복사</button>
+    <button type="button" onclick="CopyCode('code-block')">코드 복사</button>
       </fieldset>
 
   <img src="image/51.png"><br>
-  <h4>randi_range함수는 매개변수 from,to까지 정수형값을 반환함.</h4>
+  <h4>배열 요소에 접근하는 것과 수정(제거, 추가)하는 방법</h4>
+  <fieldset>
+    <pre id="code-block2"><code>extends Node
+
+func _ready():
+	#대괄호안에 요소를 넣을 수 있음.
+	#요소는 자료형이 달라도 가능함
+	#만약 요소를 특정 자료형으로 하고 싶다면
+	var item:Array[String]=["Potion","Feather", "Stolen harp"]
+	#요소에 접근하려면 [숫자0~크기] 로 접근가능함
+	print(item[0])
+	print(item[1])
+	print(item[2])
+	#수정도 가능함 
+	item[1]="이게 1번?"
+	item[2]="변함!"
+	print(item[0])
+	print(item[1])
+	print(item[2])
+	# 번호로 제거도 가능함
+	item.remove_at(1)
+	#추가도 가능함
+	item.append("추가")
+	print(item[0])
+	print(item[1])
+	print(item[2])
+</pre></code>
+<button type="button" onclick="CopyCode('code-block2')">코드 복사</button>
+  </fieldset>
     <fieldset>
       <legend>버튼을 누르세요!</legend>
       <input class="button" type="button" value="뒤로" id="button">
