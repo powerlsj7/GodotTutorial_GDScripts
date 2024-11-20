@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: D2Coding;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css"> <!-- CSS 파일 불러오기 -->
+  <script src="utils.js"></script> <!-- JavaScript 파일 불러오기 -->
+  <audio src="button.mp3" id="buttonAudio"></audio>
+  <title>고도 튜토리얼</title>
+  <h1>고도 GDScripts 튜토리얼33</h1>
+</head>
+
+<body>
+  <form action="register.php">
+    <fieldset>
+      <img src="image/57.png"><br>
+      <h4>enum으로 게임에서 상태나 태그를 지정하는 방법을 배워봄.</h4>
+    </fieldset>
+      <fieldset>
+        <pre id="code-block"><code>extends Node
+#이번에는 게임에서 상태나 태그를 지정하는 enum을 배워봄.
+enum {ALLY, NEUTral,enemy}
+var unit_alignement=ALLY
+func _ready():
+	pass
+    </code></pre>
+      <button type="button" onclick="CopyCode('code-block')">코드 복사</button>
+      </fieldset>
+  <img src="image/58.png"><br>
+  <h4>이번에는 enum 변수를 만들고 var변수에 enmu변수.상태값으로 초기화한 뒤 조건부 출력.</h4>
+
+  <fieldset>
+    <pre id="code-block2"><code>extends Node
+#이번에는 게임에서 상태나 태그를 지정하는 enum을 배워봄.
+enum Alignment{ALLY, NEUTRAL,ENEMY}
+var unit_alignment=Alignment.ALLY
+func _ready():
+	if unit_alignment==Alignment.ENEMY:
+		print("You are not welcome here.")
+	else:
+		print("Welcome.")
+#ALLY기 때문에 Welcome.이 출력
+</code></pre>
+      <button type="button" onclick="CopyCode('code-block2')">코드 복사</button>
+  </fieldset>
+  <img src="image/59.png"><br>
+  <h4>@export로 에디터 상태창에 보여지게 한 뒤 에디터에서 수정할 수 있게 할 수 있음.</h4>
+
+  <fieldset>
+    <pre id="code-block3"><code>extends Node
+#이번에는 게임에서 상태나 태그를 지정하는 enum을 배워봄.
+enum Alignment{ALLY, NEUTRAL,ENEMY}
+@export var unit_alignment : Alignment
+func _ready():
+	if unit_alignment==Alignment.ENEMY:
+		print("You are not welcome here.")
+	else:
+		print("Welcome.")
+</code></pre>
+      <button type="button" onclick="CopyCode('code-block3')">코드 복사</button>
+  </fieldset>
+  <img src="image/60.png"><br>
+  <h4>기본적으로 enum은 0~개수-1까지 값으로 각각 부여되는데 임의로 지정할 수 있음.</h4>
+  <h4>for문으로 탐색한 enum값은 문자열이고, enum변수의 특정 상태값을 출력하면 정수형으로 보여짐.</h4>
+    <fieldset>
+      <legend>버튼을 누르세요!</legend>
+      <input class="button" type="button" value="뒤로" id="button">
+      <script>NextPage("32.html", "button")</script>
+      <input class="button" type="button" value="다음" id="button1">
+      <script>NextPage("34.html", "button1")</script>
+    </fieldset>
+</body>
+
+</html>
