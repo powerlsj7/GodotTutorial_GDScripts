@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: D2Coding;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css"> <!-- CSS 파일 불러오기 -->
+  <script src="utils.js"></script> <!-- JavaScript 파일 불러오기 -->
+  <audio src="button.mp3" id="buttonAudio"></audio>
+  <title>고도 튜토리얼</title>
+  <h1>고도 GDScripts 튜토리얼34</h1>
+</head>
+
+<body>
+  <form action="register.php">
+    <fieldset>
+      <img src="image/61.png"><br>
+      <h4>match문을 배워봄. switch랑 비슷하지만 좀더 강력함.</h4>
+      <h4>자료형값이 맞는지 정확히 비교함</h4>
+    </fieldset>
+      <fieldset>
+        <pre id="code-block"><code>extends Node
+#이번에는 게임에서 상태나 태그를 지정하는 enum을 배워봄.
+enum Alignment{ALLY=0, NEUTRAL=1,ENEMY=-1}
+#사실상 enum은 초기화한 뒤 번호를 지정하지 않으면 0부터 쭉 순서대로 부여됨.
+@export var my_alignment : Alignment
+func _ready():
+	#match문을 배워봄.
+	#switch문이랑 비슷하지만 좀더 강력함.
+	#자료형을 정확하게 인식함. 정수 1과 1.0은 다른걸로 판단.
+	match my_alignment:
+		Alignment.ALLY:
+			print("Hello, friend!")
+		Alignment.NEUTRAL:
+			print("I come in piece!")
+		Alignment.ENEMY:
+			print("TASTE MY WRATH!")
+		_:#이건 기본값으로 위의 상태값이 아니면 이 부분이 실행됨.
+			print("Who art thou?")
+	#enum이 아니어도 사용가능
+	var test=1.0
+	match test:
+		1.0:
+			print("float")
+		1:
+			print(1)
+		_:
+			print("기본")
+</code></pre>
+      <button type="button" onclick="CopyCode('code-block')">코드 복사</button>
+  </fieldset>
+    <fieldset>
+      <legend>버튼을 누르세요!</legend>
+      <input class="button" type="button" value="뒤로" id="button">
+      <script>NextPage("33.html", "button")</script>
+      <input class="button" type="button" value="다음" id="button1">
+      <script>NextPage("35.html", "button1")</script>
+    </fieldset>
+</body>
+
+</html>
