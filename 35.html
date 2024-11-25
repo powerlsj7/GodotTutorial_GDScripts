@@ -19,40 +19,74 @@
   <form action="register.php">
     <fieldset>
       <img src="image/62.png"><br>
-      <h4>match문을 배워봄. switch랑 비슷하지만 좀더 강력함.</h4>
-      <h4>자료형값이 맞는지 정확히 비교함</h4>
+      <h4>에디터의 노드 트리에 보이는 노드를 스크립트로 불러오는 방법.</h4>
+      <h4>드래그로 경로만 불러오거나 Ctrl을 같이 눌러서 드래그하면 @Onready가 붙으면서 자동으로 변수가 생긴다.</h4>
+      <h4>@Onready는 Gau func _ready함수가 실행되기 전에 초기화된다.</h4>
     </fieldset>
       <fieldset>
         <pre id="code-block"><code>extends Node
-#이번에는 게임에서 상태나 태그를 지정하는 enum을 배워봄.
-enum Alignment{ALLY=0, NEUTRAL=1,ENEMY=-1}
-#사실상 enum은 초기화한 뒤 번호를 지정하지 않으면 0부터 쭉 순서대로 부여됨.
-@export var my_alignment : Alignment
+#왼쪽 노드트리에서 특정 노드를 참조하는 법을 배움.
+#마우스 드래그로 스크립트창에 불러올 수 있음.
+#$Player/Weapon
+#Ctrl을 누르면 앞에 @onready가 붙음.
+#@onready var weapon_2 = $Player/Weapon2
+#위 문법은 아래 문법과 동일하다.
+@onready var Weapon=get_node( "Player/Weapon")
+#Onready는 _ready함수가 작동하기 직전에 초기화한다.
 func _ready():
-	#match문을 배워봄.
-	#switch문이랑 비슷하지만 좀더 강력함.
-	#자료형을 정확하게 인식함. 정수 1과 1.0은 다른걸로 판단.
-	match my_alignment:
-		Alignment.ALLY:
-			print("Hello, friend!")
-		Alignment.NEUTRAL:
-			print("I come in piece!")
-		Alignment.ENEMY:
-			print("TASTE MY WRATH!")
-		_:#이건 기본값으로 위의 상태값이 아니면 이 부분이 실행됨.
-			print("Who art thou?")
-	#enum이 아니어도 사용가능
-	var test=1.0
-	match test:
-		1.0:
-			print("float")
-		1:
-			print(1)
-		_:
-			print("기본")
+	# 변수의 경로를 확인할 수 있다.
+	print(Weapon.get_path())
 </code></pre>
       <button type="button" onclick="CopyCode('code-block')">코드 복사</button>
   </fieldset>
+  <fieldset>
+    <img src="image/63.png"><br>
+    <h4>@export로 에디터 인스펙터에서 참조가 가능하다</h4>
+ 
+  </fieldset>
+    <fieldset>
+      <pre id="code-block2"><code>extends Node
+#왼쪽 노드트리에서 특정 노드를 참조하는 법을 배움.
+#마우스 드래그로 스크립트창에 불러올 수 있음.
+#$Player/Weapon
+#Ctrl을 누르면 앞에 @onready가 붙음.
+#@onready var weapon_2 = $Player/Weapon2
+#위 문법은 아래 문법과 동일하다.
+#@export를 사용하여 에디터 우측 인스펙터에서 참조하는 것도 가능하다.
+@export var Weapon :Node
+#Onready는 _ready함수가 작동하기 직전에 초기화한다.
+func _ready():
+	print(Weapon.get_path())
+</code></pre>
+    <button type="button" onclick="CopyCode('code-block2')">코드 복사</button>
+</fieldset>
+<fieldset>
+  <img src="image/64.png"><br>
+  <h4>Weapon확인</h4>
+</fieldset>
+<fieldset>
+  <img src="image/65.png"><br>
+  <h4>자료형을 특정해서 선언도 가능함. Node2D에 상속된 Sprite2D</h4>
+</fieldset>
+  <fieldset>
+    <pre id="code-block3"><code>extends Node
+#왼쪽 노드트리에서 특정 노드를 참조하는 법을 배움.
+#마우스 드래그로 스크립트창에 불러올 수 있음.
+#$Player/Weapon
+#Ctrl을 누르면 앞에 @onready가 붙음.
+#@onready var weapon_2 = $Player/Weapon2
+#위 문법은 아래 문법과 동일하다.
+#@export를 사용하여 에디터 우측 인스펙터에서 참조하는 것도 가능하다.
+@export var Weapon :Sprite2D
+#자료형을 더 구체적으로 선언할 수 있다.
+#Onready는 _ready함수가 작동하기 직전에 초기화한다.
+func _ready():
+	if Weapon is Node2D:
+		#Sprite2D는 Node2D에 상속되어 있으니까 
+		print("Is Node2D")
+</code></pre>
+  <button type="button" onclick="CopyCode('code-block3')">코드 복사</button>
+</fieldset>
     <fieldset>
       <legend>버튼을 누르세요!</legend>
       <input class="button" type="button" value="뒤로" id="button">
