@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: D2Coding;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css"> <!-- CSS 파일 불러오기 -->
+  <script src="utils.js"></script> <!-- JavaScript 파일 불러오기 -->
+  <audio src="button.mp3" id="buttonAudio"></audio>
+  <title>고도 튜토리얼</title>
+  <h1>고도 GDScripts 튜토리얼36</h1>
+</head>
+
+<body>
+  <form action="register.php">
+    <fieldset>
+      <img src="image/66.png"><br>
+      <h4>고도엔진의 시그널을 배워봄.</h4>
+      <h4>노드에 신호를 보내기도하고 받을 수도 있음.</h4>
+      <img src="image/67.png"><br>
+      <h4>Button노드를 만들고 Button노드를 클릭 그 후 우측 인스펙터창에서 시그널을 클릭.</h4>
+      <img src="image/68.png"><br>
+      <h4>pressed()함수 더블클릭 후 연결</h4>
+      <img src="image/69.png"><br>
+      <h4>버튼 누르면  호출되는 함수 func _on_button_pressed():가 보임</h4>
+      <img src="image/70.png"><br>
+      <h4>스크립트에서 녹색화살표를 누르면 연결된걸 확인할 수 있음. </h4>
+      <img src="image/71.png"><br>
+      <h4> 이제 print()함수를 이용해서 버튼을 눌렀을 때 출력확인을 해봄.</h4>
+    </fieldset>
+      <fieldset>
+        <pre id="code-block"><code>extends Node
+#고도엔진의 시그널을 배워봄.
+
+func _on_button_pressed():
+	print("ButtonClick")
+
+</code></pre>
+      <button type="button" onclick="CopyCode('code-block')">코드 복사</button>
+  </fieldset>
+    </fieldset>
+      <legend>버튼을 누르세요!</legend>
+      <input class="button" type="button" value="뒤로" id="button">
+      <script>NextPage("35.html", "button")</script>
+      <input class="button" type="button" value="다음" id="button1">
+      <script>NextPage("37.html", "button1")</script>
+    </fieldset>
+</body>
+
+</html>
